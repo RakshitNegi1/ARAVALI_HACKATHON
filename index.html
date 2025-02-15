@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cab Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CabHUB - Trusted Cab Services</h1>
+            <p>Best in City - Book Now</p>
+            <h2>+91 88517 05397</h2>
+        </div>
+    </header>
+    
+    <section class="booking">
+        <div class="container">
+            <h2>Book a Cab</h2>
+            <form id="cabForm">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                <input type="date" id="date" required>
+                <input type="text" id="start" placeholder="Start Location" required>
+                <input type="text" id="end" placeholder="End Location" required>
+                <select id="vehicleType">
+                    <option value="bike">Bike</option>
+                    <option value="auto">Auto</option>
+                    <option value="mini">Mini</option>
+                    <option value="prime">Prime</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <h2>Find Your Route</h2>
+            <div id="map"></div>
+            <p id="distance"></p>
+        </div>
+    </section>
+
+    <section class="tariffs">
+        <div class="container">
+            <h2>Price Comparison</h2>
+            <div class="tariff-box">
+                <h3>Ola</h3>
+                <p id="olaPrice">Price per KM: ₹12</p>
+            </div>
+            <div class="tariff-box">
+                <h3>Uber</h3>
+                <p id="uberPrice">Price per KM: ₹10</p>
+            </div>
+            <div class="tariff-box">
+                <h3>Rapido</h3>
+                <p id="rapidoPrice">Price per KM: ₹8</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CabHUB. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
